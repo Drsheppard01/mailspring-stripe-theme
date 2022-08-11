@@ -12,7 +12,7 @@
 @blueDark: #153547;
 
 @greenLight: #52A58E;
-@white: #FFFFFF;
+@white: #0a0a0a;
 
 //=============================== Components ===========================//
 
@@ -151,7 +151,11 @@
 
 // ----- Colors -----
 @text-color: @blackBase;
+@text-color-subtle: fadeout(@text-color, 20%);
+@text-color-very-subtle: fadeout(@text-color, 40%);
 @text-color-inverse: @white;
+@text-color-inverse-subtle: fadeout(@text-color-inverse, 20%);
+@text-color-inverse-very-subtle: fadeout(@text-color-inverse, 50%);
 @text-color-heading: @source-header-color;
 
 @text-color-link: @blueBase;
