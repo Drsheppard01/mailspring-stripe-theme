@@ -1,7 +1,7 @@
 {
   "name": "Stripe",
   "displayName": "Stripe",
-  "theme": "Stripe",
+  "theme": "ui",
   "version": "0.1.0",
   "description": "Mailspring theme that displays accounts below your messages.",
   "license": "MIT",
