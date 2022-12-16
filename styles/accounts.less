@@ -3,7 +3,6 @@
 
 .account-sidebar {
     width: 100%;
-
     &:before {
         content: "";
         width: 200%;
@@ -43,7 +42,6 @@
                     width: 40px !important;
                     height: auto !important;
                 }
-
                 &:hover {
                     background-color: @white;
                 }
@@ -58,27 +56,26 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                color: @source-list-default-color;
+                color:@source-list-default-color;
 
                 >div {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
+               display: flex;
+              flex-direction: row;
+              align-items: center;
                 }
 
                 .heading {
                     height: @source-bar-height;
-                    align-items: center;
-                    padding: 0;
-                    padding-left: 8.5px;
+                    align-items:center;
+                    padding:0;
+                    padding-left:8.5px;
                     color: @text-color-heading;
-                    font-size: 10px;
+                    font-size:10px;
                     text-transform: uppercase;
-                    font-weight: bold;
+                    font-weight:bold;
                     letter-spacing: 0.1em;
                     background-color: @source-header-bg;
                 }
-
                 .item-container {
                     .disclosure-triangle {
                         display: none;
@@ -87,10 +84,10 @@
                     .item {
                         height: @source-bar-height;
                         color: @source-list-default-color;
-                        align-items: center;
-                        padding: 0 20px;
-                        font-size: 13px;
-                        font-weight: bold;
+                        align-items:center;
+                        padding:0 20px;
+                        font-size:13px;
+                        font-weight:bold;
                         overflow: hidden;
                         align-items: center;
 
@@ -101,9 +98,9 @@
                             display: block;
                             background-color: @blueDark;
                             position: relative;
-                            top: calc(~"50%"- 2px);
+                            top: calc(~"50%" - 2px);
                             left: 50%;
-                            transform: scale(0, 1);
+                            transform: scale(0,1);
                         }
 
                         .icon img.content-mask {
@@ -116,11 +113,11 @@
 
                         &.selected {
                             background-color: @source-list-active-bg;
-                            color: @source-list-active-color;
+                            color:@source-list-active-color;
 
                             &:before {
                                 transition: all 0.2s linear;
-                                transform: scale(200, 1);
+                                transform: scale(200,1);
                                 background-color: @greenLight;
                             }
 
@@ -139,36 +136,33 @@
                         background-color: @source-list-bg-dropping;
                     }
                 }
-
                 .item-children {
                     display: none;
                 }
 
-                &:not(:first-of-type) {
-                    /* Folders */
-                    border-left: 0px solid darken(@source-list-secondary-bg, 5%);
+                &:not(:first-of-type) {    /* Folders */
+                    border-left:0px solid darken(@source-list-secondary-bg,5%);
                     transform: all 1.0s;
                     background: @source-list-secondary-bg;
 
                     &:nth-of-type(odd) {
-                        background: darken(@source-list-secondary-bg, 4%);
+                    background: darken(@source-list-secondary-bg,4%);
 
                     }
-
                     .heading {
-                        padding: 0 20px;
-                        text-align: center;
+                        padding:0 20px;
+                        text-align:center;
                         flex-direction: column;
                         justify-content: center;
-                        position: relative;
+                        position:relative;
 
-                        &:hover {}
-
+                        &:hover {
+                        }
                         .add-item-button {
                             display: inline-block;
                             margin: 0;
-                            position: absolute;
-                            right: 0;
+                            position:absolute;
+                            right:0;
                             top: 0;
                             background-color: @source-list-add-item-bg;
                             color: @blueBase;
@@ -176,28 +170,25 @@
                             img {
                                 display: none;
                             }
-
                             &:before {
                                 content: "+";
-                                font-size: 20px;
-                                font-weight: bold;
-                                height: 20px;
-                                width: 20px;
-                                line-height: 18px;
+                                font-size:20px;
+                                font-weight:bold;
+                                height:20px;
+                                width:20px;
+                                line-height:18px;
                                 display: block;
                             }
-
                             &:hover {
                                 background-color: @source-list-default-color;
                                 color: @white;
                             }
                         }
-
                         .collapse-button {
-                            margin: 0;
+                            margin:0;
                             animation: slideExpandHeight 1.0s, fadeIn 0.5s;
                             text-decoration: underline;
-                            color: white;
+                            color:white;
 
                             &:hover {
                                 color: @blueDark;
@@ -208,21 +199,20 @@
                     .item-container {
                         animation: slideExpandWidth 0.5s ease-out;
                         overflow: hidden;
-                        border-left: 1px solid @source-list-border;
+                        border-left:1px solid @source-list-border;
 
                         .item {
-                            font-size: 13px;
-                            font-weight: normal;
-                            padding: 0 15px;
+                            font-size:13px;
+                            font-weight:normal;
+                            padding:0 15px;
                             text-align: center;
 
                             .icon {
                                 display: none;
                             }
-
                             .name {
                                 line-height: 16px;
-                                padding: 0;
+                                padding:0;
                             }
 
                             &.editing {
@@ -244,7 +234,7 @@
                                     height: auto;
 
                                     &::-webkit-input-placeholder {
-                                        color: fadeout(@blueDark, 60%);
+                                        color: fadeout(@blueDark,60%);
                                         font-weight: normal;
                                     }
                                 }
