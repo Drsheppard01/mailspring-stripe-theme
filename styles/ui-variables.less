@@ -1,111 +1,116 @@
-@grayBase: #efefef;
-@grayLight: #999999;
-@grayMed: #666666;
-@blackBase: #333333;
+// All themes need a file called `ui-variables` that extends from the base
+// variables and overrides colors, padding, etc. Other plugins import
+// `ui-variables` to make their custom CSS react to the current theme.
+@import 'base/ui-variables';
 
-@red: #A04534;
-@gold: #E4AE31;
+@grayBase:    #efefef;
+@grayLight:   #999999;
+@grayMed:     #666666;
+@blackBase:   #333333;
 
-@blueBase: #EDF4F5;
-@blueLight: #B4CCCD;
-@blueMed: #3E7880;
-@blueDark: #153547;
+@red:         #A04534;
+@gold:        #E4AE31;
 
-@greenLight: #52A58E;
-@white: #0a0a0a;
+@blueBase:    #EDF4F5;
+@blueLight:   #B4CCCD;
+@blueMed:     #3E7880;
+@blueDark:    #153547;
+
+@greenLight:  #52A58E;
+
 
 //=============================== Components ===========================//
 
 //== Toolbar
-@toolbar-btn-bg: @white;
-@toolbar-btn-border: #dfdfdf;
-@toolbar-btn-active-bg: @blueBase;
-@toolbar-btn-active-border: @blueDark;
-@toolbar-btn-hover-bg: @blueDark;
-@toolbar-btn-hover-color: @white;
+@toolbar-btn-bg:                @white;
+@toolbar-btn-border:            #dfdfdf;
+@toolbar-btn-active-bg:         @blueBase;
+@toolbar-btn-active-border:     @blueDark;
+@toolbar-btn-hover-bg:          @blueDark;
+@toolbar-btn-hover-color:       @white;
 
-@toolbar-item-height: 32px;
-@toolbar-padding-v: 8px;
-@toolbar-item-border-width: 1px;
-@toolbar-height: @toolbar-item-height + 2*@toolbar-item-border-width + 2*@toolbar-padding-v;
-@search-active-border-bot-width: 6*@toolbar-item-border-width;
-@toolbar-item-width: @toolbar-item-height*1.5;
+@toolbar-item-height:             32px;
+@toolbar-padding-v:               8px;
+@toolbar-item-border-width:       1px;
+@toolbar-height:                  @toolbar-item-height + 2*@toolbar-item-border-width + 2*@toolbar-padding-v;
+@search-active-border-bot-width:  6*@toolbar-item-border-width;
+@toolbar-item-width:              @toolbar-item-height*1.5;
 
 
 
 //== Account Sidebar
-@panel-background-color: @blueLight;
-@source-list-bg: @panel-background-color;
-@source-list-primary-bg: @panel-background-color;
-@source-list-secondary-bg: darken(@panel-background-color, 7%);
-@source-list-border: fadeOut(@source-list-default-color, 85%);
-@source-list-active-bg: @blueBase;
-@source-list-active-color: @blueDark;
-@source-list-default-color: @blueMed;
-@source-list-bg-hover: darken(@panel-background-color, 10%);
-@source-list-bg-dropping: darken(@panel-background-color, 15%);
-@source-list-add-item-bg: fadeOut(@source-list-default-color, 60%);
+@panel-background-color:        @blueLight;
+@source-list-bg:                @panel-background-color;
+@source-list-primary-bg:        @panel-background-color;
+@source-list-secondary-bg:      darken(@panel-background-color,7%);
+@source-list-border:            fadeOut(@source-list-default-color,85%);
+@source-list-active-bg:         @blueBase;
+@source-list-active-color:      @blueDark;
+@source-list-default-color:     @blueMed;
+@source-list-bg-hover:          darken(@panel-background-color,10%);
+@source-list-bg-dropping:       darken(@panel-background-color,15%);
+@source-list-add-item-bg:       fadeOut(@source-list-default-color,60%);
 
-@source-bar-height: 60px;
-@source-item-header-height: 60px;
-@source-item-height: 60px;
-@source-item-height-child: @source-item-height;
-@source-item-padding-h: 0;
+@source-bar-height:             60px;
+@source-item-header-height:     60px;
+@source-item-height:            60px;
+@source-item-height-child:      @source-item-height;
+@source-item-padding-h:         0;
 
-@source-header-bg: transparent;
-@source-header-color: @source-list-default-color;
-@source-header-fsize: 10px;
-@source-item-fsize: 13px;
+@source-header-bg:              transparent;
+@source-header-color:           @source-list-default-color;
+@source-header-fsize:           10px;
+@source-item-fsize:             13px;
 
 
 
 //== Thread List (e.g, `.list-group-item`, `.list-item`)
-@list-bg: @grayBase;
-@list-color: fadeOut(@blueDark, 30%);
-@list-border: #dfdfdf;
-@list-hover-bg: darken(@list-bg, 4%);
-@list-focused-color: @white;
-@list-focused-bg: @component-active-color;
-@list-focused-border: @list-focused-bg;
-@list-selected-color: @white;
-@list-selected-bg: @component-active-color;
-@list-selected-border: mix(@component-active-color, @list-bg, 50%);
+@list-bg:                  @grayBase;
+@list-color:               fadeOut(@blueDark,30%);
+@list-border:              #dfdfdf;
+@list-hover-bg:            darken(@list-bg, 4%);
+@list-focused-color:       @white;
+@list-focused-bg:          @component-active-color;
+@list-focused-border:      @list-focused-bg;
+@list-selected-color:      @white;
+@list-selected-bg:         @component-active-color;
+@list-selected-border:     mix(@component-active-color, @list-bg, 50%);
 
-@list-unread-color: lighten(@blueDark, 10%);
+@list-unread-color: lighten(@blueDark,10%);
 @list-unread-bg: @white;
 
 
 //== Message
-@msg-shadow: 0 0 8px #bdbdbd;
-@msg-corner-radius: 0px;
-@msg-border: 0px solid #dfdfdf;
+@msg-shadow:          0 0 8px #bdbdbd;
+@msg-corner-radius:   0px;
+@msg-border:          0px solid #dfdfdf;
 
-@msg-collapsed-bg: #FBFBFB;
-@msg-collapsed-shadow: 0 0 8px #dfdfdf;
+@msg-collapsed-bg:        #FBFBFB;
+@msg-collapsed-shadow:    0 0 8px #dfdfdf;
 
-@msg-max-width: 800px;
-@msg-padding-v: 10px;
-@msg-padding-h: 20px;
-@msg-padding: @msg-padding-v @msg-padding-h;
+@msg-max-width:             800px;
+@msg-padding-v:             10px;
+@msg-padding-h:             20px;
+@msg-padding:               @msg-padding-v @msg-padding-h;
 
 @msg-collapsed-width-delta: 20px;
-@msg-collapsed-max-width: @msg-max-width - @msg-collapsed-width-delta;
-@msg-collapsed-padding: @msg-padding-v @msg-padding-h;
+@msg-collapsed-max-width:   @msg-max-width -  @msg-collapsed-width-delta;
+@msg-collapsed-padding:     @msg-padding-v @msg-padding-h;
 
-@msg-header-fields-height: 60px;
+@msg-header-fields-height:  60px;
 
 
 
 //== Notifications
-@background-color-info: @blueLight;
+@background-color-info: @blue-light;
 @background-color-success: #009ec4;
 @background-color-warning: #ff4800;
 @background-color-error: #f15f4b;
 @background-color-pending: #b4babd;
 
 //== Menus
-@menu-item-color-hover: fade(@blueLight, 10%);
-@menu-item-color-selected: @blueLight;
+@menu-item-color-hover: fade(@blue-light, 10%);
+@menu-item-color-selected: @blue-light;
 @menu-text-color-selected: @text-color-inverse;
 
 //== Sizes
@@ -119,128 +124,77 @@
 
 //=============================== Colors ===============================//
 
-@accent-primary: @blueBase;
-@accent-primary-dark: @blueDark;
+@accent-primary:      @blue;
+@accent-primary-dark: @blue-dark;
 
-@background-primary: @white;
+@background-primary:     @white;
 @background-off-primary: #fdfdfd;
-@background-secondary: #f6f6f6;
-@background-tertiary: #6d7987;
-@background-darkest:       #161D31;
-@background-dark:          #212943;
-@background-dark-accent:   #9FAAC7;
-@background-darkest:       #EAEDF1;
-@background-dark:          #fff;
-@background-dark-accent:   lighten(#24293C, 12%);
-@background-dark-accent-2: #24293C;
+@background-secondary:   #f6f6f6;
+@background-tertiary:    #6d7987;
 
-@color-info: @blueDark;
+@color-info:    @blue-dark;
 @color-success: #5CB346;
 @color-warning: #f0ad4e;
-@color-error: #d9534f;
-@color-danger: #d9534f;
+@color-error:   #d9534f;
+@color-danger:  #d9534f;
 
-@component-active-color: @blueDark;
-@component-active-bg: @background-primary;
+@component-active-color:        @blueDark;
+@component-active-bg:           @background-primary;
 
-@background-gradient: linear-gradient(to top, rgba(241, 241, 241, 0.75) 0%,
-        rgba(253, 253, 253, 0.75) 100%);
+@background-gradient: linear-gradient(to top, rgba(241,241,241,0.75) 0%,
+rgba(253,253,253,0.75) 100%);
 
 @border-color-primary: darken(@background-primary, 10%);
 @border-color-secondary: darken(@background-secondary, 10%);
 @border-color-tertiary: darken(@background-tertiary, 10%);
 @border-color-divider: @border-color-secondary;
 
-@shadow: rgba(50, 50, 50, 0.6);
+@shadow: rgba(50,50,50,0.6);
 
 
 //============================= Typography =============================//
 
 // ----- Colors -----
-@text-color: @blackBase;
-@text-color-subtle: fadeout(@text-color, 20%);
-@text-color-very-subtle: fadeout(@text-color, 40%);
+@text-color:         @black;
 @text-color-inverse: @white;
-@text-color-inverse-subtle: fadeout(@text-color-inverse, 20%);
-@text-color-inverse-very-subtle: fadeout(@text-color-inverse, 50%);
 @text-color-heading: @source-header-color;
 
-@text-color-link: @blueBase;
-@text-color-link-hover: @blueDark;
-@text-color-link-active: @blueDark;
+@text-color-link:        @blue;
+@text-color-link-hover:  @blue-dark;
+@text-color-link-active: @blue-dark;
 
 
 
 //============================= Animations =============================//
 
 @keyframes slideExpandHeight {
-    0% {
-        max-height: 0;
-    }
-
-    100% {
-        max-height: 300px;
-    }
+    0%    { max-height: 0; }
+    100%  { max-height: 300px; }
 }
 
 @keyframes slideExpandWidth {
-    0% {
-        max-width: 0;
-    }
-
-    100% {
-        max-width: 400px;
-    }
+    0%    { max-width: 0; }
+    100%  { max-width: 400px; }
 }
-
 @keyframes scaleIn {
-    0% {
-        transform: scale(0, 0);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
+    0%    { transform: scale(0,0); }
+    100%  { transform: scale(1,1); }
 }
-
 @keyframes scaleInHeight {
-    0% {
-        transform: scale(1, 0);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
+    0%    { transform: scale(1,0); }
+    100%  { transform: scale(1,1); }
 }
-
 @keyframes scaleInWidth {
-    0% {
-        transform: scale(0, 1);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
+    0%    { transform: scale(0,1); }
+    100%  { transform: scale(1,1); }
 }
-
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1.0;
-    }
+    0%    { opacity:0; }
+    100%  { opacity:1.0; }
 }
-
 @keyframes flashIn {
-    0% {
-        background-color: @white;
-    }
-
-    100% {
-        background-color: transparent;
-    }
+    0%    { background-color: @white; }
+    100%  { background-color: transparent; }
 }
 
 
@@ -250,24 +204,21 @@
 //============================= Layout Hack =============================//
 
 div.column-RootSidebar[style] {
-    position: fixed !important;
-    height: @source-bar-height  !important;
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    bottom: 0;
+    position:   fixed !important;
+    height:     @source-bar-height !important;
+    width:      100% !important;
+    min-width:  100% !important;
+    max-width:  100% !important;
+    bottom:0;
     z-index: 2;
 }
-
 .column-ThreadList,
 .column-MessageList {
-    height: calc(~"100%"- @source-bar-height) !important;
+    height: calc(~"100%" - @source-bar-height) !important;
 }
-
 .column-MessageList {
-    min-width: 600px !important;
+    min-width:600px !important;
 }
-
 .sheet-toolbar-container {
     display: flex;
 
@@ -278,10 +229,9 @@ div.column-RootSidebar[style] {
         width: auto !important;
         left: auto !important;
     }
-
     .toolbar-MessageList {
         width: auto !important;
         left: auto !important;
-        right: 0;
+        right:0;
     }
 }
